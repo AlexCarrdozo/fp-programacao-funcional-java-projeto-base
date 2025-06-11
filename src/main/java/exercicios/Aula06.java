@@ -43,7 +43,15 @@ public class Aula06 extends Aula {
      * do IntelliJ e selecione a opção "Run All Tests".
      */
     public Aula06() {
-        //TODO: Insira chamdas das funções existentes aqui, para você conferir como estão funcionando
+        System.out.println("Estudantes mulheres aprovadas (não modificável):");
+        getEstudantesMulheresAprovadas().forEach(System.out::println);
+
+        System.out.println("\nEstudantes mulheres aprovadas ordenadas por curso e nota (não modificável):");
+        getEstudantesMulheresAprovadasOrdenadasPorCursoAndNota().forEach(System.out::println);
+
+        System.out.println("\nEstudantes mulheres aprovadas (modificável):");
+        List<Estudante> listaModificavel = getEstudantesMulheresAprovadasNaoOrdenadasModificavel();
+        System.out.println("Tamanho da lista modificável: " + listaModificavel.size());
         final var curso = generator.CURSOS[3];
         final char homem = 'M';
         final char mulher = 'F';
